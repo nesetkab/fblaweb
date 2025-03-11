@@ -4,6 +4,7 @@
 import Container from '@/app/_components/container'
 import Header from '@/app/_components/header'
 import Image from 'next/image'
+import Chat from '../_components/chat'
 
 
 export default function VisitorInformationPage() {
@@ -150,6 +151,7 @@ export default function VisitorInformationPage() {
             </div>
           </div>
         </div>
+        <Chat />
       </Container>
     </div>
   )
