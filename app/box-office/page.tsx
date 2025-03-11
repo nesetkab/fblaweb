@@ -2,6 +2,7 @@
 import Container from '@/app/_components/container'
 import Header from '@/app/_components/header'
 import TicketList from '@/app/_components/ticket-list'
+import Chat from '../_components/chat'
 
 export default function BoxOfficePage() {
   return (
@@ -51,6 +52,7 @@ export default function BoxOfficePage() {
             </div>
           </div>
         </div>
+        <Chat />
       </Container>
     </div>
   )
