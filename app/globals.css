@@ -228,6 +228,34 @@
     opacity: 1;
     transform: translateX(0);
   }
+}details {
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+details[open] summary ~ * {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    height: 0;
+  }
+  to {
+    opacity: 1;
+    height: auto;
+  }
+}
+
+details:not([open]) summary ~ * {
+  opacity: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+details:not([open]) {
+  max-height: 50px;;
 }
 
 @keyframes fade-down {
