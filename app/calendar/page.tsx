@@ -3,6 +3,7 @@ import CalendarComponent from '../_components/calendar-component'
 import Container from '../_components/container'
 import Header from '../_components/header'
 import Image from 'next/image'
+import Chat from '../_components/chat'
 
 export const metadata: Metadata = {
   title: 'Calendar',
@@ -76,6 +77,7 @@ export default function CalendarPage() {
             </div>
           </div>
         </div>
+        <Chat />
       </Container>
     </div>
   )
