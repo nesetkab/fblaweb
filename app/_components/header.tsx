@@ -75,10 +75,10 @@ export default function Header() {
                 variant="ghost"
                 size="icon"
                 onClick={() => setIsPasswordDialogOpen(true)}
-                className="h-8 w-8"
+                className="h-10 w-10"
                 title="Developer Mode"
               >
-                <KeyRound className="h-4 w-4 text-gray-500" />
+                <KeyRound className="h-6 w-6 text-gray-500" />
               </Button>
             )}
             {isDevMode && (
@@ -93,10 +93,10 @@ export default function Header() {
               variant="ghost"
               size="icon"
               onClick={() => setIsOpen(!isOpen)}
-              className="h-8 w-8"
+              className="h-10 w-10"
               aria-label="Toggle menu"
             >
-              {isOpen ? <HiX className="h-6 w-6 text-gray-700" /> : <HiMenu className="h-6 w-6 text-gray-700" />}
+              {isOpen ? <HiX className="h-8 w-8 text-gray-700" /> : <HiMenu className="h-8 w-8 text-gray-700" />}
             </Button>
           </div>
         </div>
