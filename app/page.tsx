@@ -5,6 +5,7 @@ import Subtext from "@/app/_components/subtext"
 import Header from "./_components/header"
 import HeroPost from "./_components/hero-post"
 import Slider from "./slider"
+import Chat from "./_components/chat"
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
         <div className="animate-fade-up [animation-delay:400ms]">
           <Subtext />
         </div>
+        <Chat />
       </Container>
     </main>
   )
