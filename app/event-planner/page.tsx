@@ -1,11 +1,12 @@
-'use client'
+"use client";
 
-import { Metadata } from 'next'
-import Container from '@/app/_components/container'
-import Header from '@/app/_components/header'
-import { Button } from '@/components/ui/button'
-import { Mail, Phone, Calendar } from 'lucide-react'
-import Chat from '../_components/chat'
+import { Metadata } from "next";
+import Container from "@/app/_components/container";
+import Header from "@/app/_components/header";
+import { Button } from "@/components/ui/button";
+import { Mail, Phone, Calendar } from "lucide-react";
+import Chat from "../_components/chat";
+import { Accordion, AccordionItem } from "@heroui/accordion";
 
 export default function EventPlannerPage() {
   return (
@@ -20,7 +21,9 @@ export default function EventPlannerPage() {
           {/* Venue Information */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12 animate-fade-up">
             <div>
-              <h2 className="text-2xl font-semibold mb-4">Venue Specifications</h2>
+              <h2 className="text-2xl font-semibold mb-4">
+                Venue Specifications
+              </h2>
               <div className="space-y-4 text-gray-600">
                 <div className="grid grid-cols-2 gap-4">
                   <div>
@@ -44,7 +47,9 @@ export default function EventPlannerPage() {
               </div>
             </div>
             <div>
-              <h2 className="text-2xl font-semibold mb-4">Available Amenities</h2>
+              <h2 className="text-2xl font-semibold mb-4">
+                Available Amenities
+              </h2>
               <ul className="list-disc list-inside text-gray-600 space-y-2">
                 <li>Professional sound system</li>
                 <li>LED video boards and ribbon displays</li>
@@ -57,48 +62,71 @@ export default function EventPlannerPage() {
           </div>
 
           {/* Event Types */}
-          <div className="mb-12 animate-fade-up">
+          <div className="mb-12">
             <h2 className="text-2xl font-semibold mb-6">Types of Events</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <h3 className="text-xl font-semibold mb-3">Sports</h3>
-                <ul className="text-gray-600 space-y-2">
-                  <li>Hockey tournaments</li>
-                  <li>Basketball games</li>
-                  <li>Wrestling events</li>
-                  <li>Figure skating</li>
-                  <li>Indoor soccer</li>
-                </ul>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <h3 className="text-xl font-semibold mb-3">Entertainment</h3>
-                <ul className="text-gray-600 space-y-2">
-                  <li>Concerts</li>
-                  <li>Comedy shows</li>
-                  <li>Family shows</li>
-                  <li>Theater productions</li>
-                  <li>Dance competitions</li>
-                </ul>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <h3 className="text-xl font-semibold mb-3">Special Events</h3>
-                <ul className="text-gray-600 space-y-2">
-                  <li>Corporate events</li>
-                  <li>Trade shows</li>
-                  <li>Graduations</li>
-                  <li>Religious events</li>
-                  <li>Community gatherings</li>
-                </ul>
-              </div>
+              <Accordion className="bg-white p-6 rounded-lg shadow-sm">
+                <AccordionItem
+                  key="1"
+                  aria-label="Sports"
+                  subtitle="Press to expand"
+                  title={<h3 className="text-xl font-semibold">Sports</h3>}
+                  className="text-l text-gray-600 cursor-pointer"
+                >
+                  <ul className="text-gray-600 space-y-2">
+                    <li>Hockey tournaments</li>
+                    <li>Basketball games</li>
+                    <li>Wrestling events</li>
+                    <li>Figure skating</li>
+                    <li>Indoor soccer</li>
+                  </ul>
+                </AccordionItem>
+              </Accordion>
+              <Accordion className="bg-white p-6 rounded-lg shadow-sm">
+                <AccordionItem
+                  key="1"
+                  aria-label="Entertainment"
+                  subtitle="Press to expand"
+                  title={<h3 className="text-xl font-semibold">Entertainment</h3>}
+                  className="text-l text-gray-600 cursor-pointer"
+                >
+                  <ul className="text-gray-600 space-y-2">
+                    <li>Concerts</li>
+                    <li>Comedy shows</li>
+                    <li>Family shows</li>
+                    <li>Theater productions</li>
+                    <li>Dance competitions</li>
+                  </ul>
+                </AccordionItem>
+              </Accordion>
+              <Accordion className="bg-white p-6 rounded-lg shadow-sm">
+                <AccordionItem
+                  key="1"
+                  aria-label="Special Events"
+                  subtitle="Press to expand"
+                  title={<h3 className="text-xl font-semibold">Special Events</h3>}
+                  className="text-l text-gray-600 cursor-pointer"
+                >
+                  <ul className="text-gray-600 space-y-2">
+                    <li>Corporate events</li>
+                    <li>Trade shows</li>
+                    <li>Graduations</li>
+                    <li>Religious events</li>
+                    <li>Community gatherings</li>
+                  </ul>
+                </AccordionItem>
+              </Accordion>
             </div>
           </div>
-                
+
           {/* Rental Information */}
           <div className="mb-12 animate-fade-up">
             <h2 className="text-2xl font-semibold mb-6">Rental Information</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-xl font-semibold mb-3">Basic Rental Includes</h3>
+                <h3 className="text-xl font-semibold mb-3">
+                  Basic Rental Includes
+                </h3>
                 <ul className="list-disc list-inside text-gray-600 space-y-2">
                   <li>Basic house lighting</li>
                   <li>Standard cleaning services</li>
@@ -109,7 +137,9 @@ export default function EventPlannerPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-3">Additional Services</h3>
+                <h3 className="text-xl font-semibold mb-3">
+                  Additional Services
+                </h3>
                 <ul className="list-disc list-inside text-gray-600 space-y-2">
                   <li>Professional lighting design</li>
                   <li>Sound system operation</li>
@@ -131,8 +161,15 @@ export default function EventPlannerPage() {
                   <Calendar className="w-5 h-5 text-blue-600" />
                   <h3 className="text-xl font-semibold">Event Booking</h3>
                 </div>
-                <p className="text-gray-600 mb-4">For initial inquiries and availability checks</p>
-                <Button className="w-full" onClick={() => window.location.href = 'mailto:events@arena.com'}>
+                <p className="text-gray-600 mb-4">
+                  For initial inquiries and availability checks
+                </p>
+                <Button
+                  className="w-full"
+                  onClick={() =>
+                    (window.location.href = "mailto:events@arena.com")
+                  }
+                >
                   Contact Booking Team
                 </Button>
               </div>
@@ -158,5 +195,5 @@ export default function EventPlannerPage() {
         <Chat />
       </Container>
     </div>
-  )
+  );
 }
