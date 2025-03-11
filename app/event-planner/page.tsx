@@ -5,6 +5,7 @@ import Container from '@/app/_components/container'
 import Header from '@/app/_components/header'
 import { Button } from '@/components/ui/button'
 import { Mail, Phone, Calendar } from 'lucide-react'
+import Chat from '../_components/chat'
 
 export default function EventPlannerPage() {
   return (
@@ -154,6 +155,7 @@ export default function EventPlannerPage() {
             </div>
           </div>
         </div>
+        <Chat />
       </Container>
     </div>
   )
